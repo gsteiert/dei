@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Banana Plug Meter</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+
+        </script>
+    </head>
+  <body>
+    <div class="top-row">
+        <img src="img/gs.svg">
+        <div class="top-text">
+        <h1>Banana Plug Meter <br>by Steiert Solutions</h1>
+        </div>
+    </div>
+    <div class="left-side">
+        <div class="sidelink"><a href="https://dei.steiert.net">DEI Home</a></div>
+        <div class="sidelink"><a href="https://greg.steiert.net">Greg Steiert</a></div>
+    </div>
+    <div class="right-side">
+        <p>Voltage = <div id="voltage">?</div></p>
+        <p>Impedance = <div id="impedance">?</div></p>
+    </div>
+    <script>
+        document.getElementById("voltage").innerHTML = urlParams.get('voltage');
+        document.getElementById("impedance").innerHTML = urlParams.get('impedance');
+    </script>
+  </body>
+</html>
